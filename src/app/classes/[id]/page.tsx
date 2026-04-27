@@ -6,7 +6,8 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { ChevronLeft, Clock, BarChart, Package, Calendar } from 'lucide-react'
 
-export default function ClassDetailPage({ params }: { params: { id: string } }) {
+export default async function ClassDetailPage({ params }: { params: Promise<{ id: string }> }) {
+  const { id } = await params
   // Mock data for the specific class
   const classInfo = {
     title: '바삭바삭 소금빵',
