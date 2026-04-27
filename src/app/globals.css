@@ -1,0 +1,25 @@
+@import 'tailwindcss';
+
+/* ── Font ───────────────────────────────────────────
+ *  `--font-sans` is injected by `next/font/google` in
+ *  layout.tsx. No fixed font is baked into this template
+ *  — designer picks fonts based on project mood.
+ * ──────────────────────────────────────────────────── */
+@theme {
+  --font-sans: var(--font-sans), system-ui, -apple-system, sans-serif;
+  --font-serif: var(--font-serif), serif;
+}
+
+/* ── Custom utility layer ────────────────────────────
+ *  Add project-wide overrides here.
+ * ──────────────────────────────────────────────────── */
+@layer base {
+  body {
+    @apply bg-neutral-50 text-neutral-900 antialiased;
+  }
+}
+
+/* ── Smooth scroll ───────────────────────────────────  */
+html {
+  scroll-behavior: smooth;
+}
